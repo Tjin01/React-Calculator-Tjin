@@ -1,38 +1,94 @@
+
+*{
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1 {
+  font-size: 2rem;
+  font-family: 'Cabin', sans-serif;
+  letter-spacing: 0.1rem;
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Calculatorcontainer {
+  display: flex;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Calculator-app {
+  width: 400px;
+  min-height: 600px;
+  border-radius: 1rem;
+  background-color: hsl(208, 16%, 24%);
+  padding: 0.7rem;
+  margin: 5px;
   display: flex;
   flex-direction: column;
+}
+
+.Displaynumber span {
+  font-size: 3.5rem;
+  color: #fff;
+  text-align: right;
+}
+
+.Displaynumber {
+  flex: 1;
+  text-align: right;
+  overflow: auto;
+}
+
+.Number-container {
+  flex: 4;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.Number-container span {
+  font-family: 'Cabin', sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #D9E40B;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 5.5rem;
+  transition: background-color 500ms ease-in;
+  flex: 1 0 21%; 
+  margin: 5px;
+  height: 85px;
 }
 
-.App-link {
-  color: #61dafb;
+.Number-container span:nth-child(4):hover,
+.Number-container span:nth-child(8):hover,
+.Number-container span:nth-child(12):hover,
+.Number-container span:nth-child(16):hover,
+.Number-container span:nth-child(19):hover,
+.Number-container span:hover {
+  background-color: rgb(197, 194, 194);
+  transition: background-color 500ms linear;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Number-container span:nth-child(-n+3){
+  background-color: #C8CCCE;
+}
+
+.Number-container span:nth-child(4),
+.Number-container span:nth-child(8),
+.Number-container span:nth-child(12),
+.Number-container span:nth-child(16),
+.Number-container span:nth-child(19){
+  background-color: tomato;
+}
+
+
+.Number-container span:nth-child(17) {
+    flex: 6 1 35%;
 }
