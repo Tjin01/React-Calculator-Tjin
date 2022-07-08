@@ -70,10 +70,8 @@ class App extends React.Component {
     if(regexOp.test(valop) && this.state.current !== ''){
       this.setState({
         previous: this.state.current,
-      }, () => {});
-      this.setState({
         selectedoperator: valop,
-      });
+      }, () => {});
       if(this.state.previous !== '' && valop === '=' && this.state.current !== '') {
        return this.runCalculation();
       } else if (valop === "%" && this.state.current !== ''){
@@ -139,11 +137,7 @@ class App extends React.Component {
       });
       this.setState({
         current: '0',
-      });
-      this.setState({
         previous: '',
-      });
-      this.setState({
         selectedoperator: '',
       });
     }
